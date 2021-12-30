@@ -11,4 +11,13 @@ module.exports = {
   "core": {
     "builder": "storybook-builder-vite"
   },
+
+    viteFinal: (config) => {
+        config.plugins = [
+            ...config.plugins,
+            require('@preact/preset-vite').default()
+        ]
+        return config
+    }
+
 }

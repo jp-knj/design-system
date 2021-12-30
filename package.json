@@ -1,6 +1,7 @@
 {
   "name": "04_storybook",
   "version": "0.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
