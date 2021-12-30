@@ -1,6 +1,7 @@
+import {UserConfig} from 'vite'
 import preact from '@preact/preset-vite'
 import {CoreConfig, Options, StorybookConfig} from '@storybook/core-common'
-import {UserConfig} from 'vite'
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
 import {exists} from '../utils/exists'
 import {Weaken} from '../utils/weaken'
@@ -20,7 +21,10 @@ const config: CustomizedStorybookConfig = {
         builder: 'storybook-builder-vite'
     },
     viteFinal: (config) => {
-        if (exists(config.plugins)) config.plugins = [...config.plugins, preact()]
+        if (exists(config.plugins)) {
+            config.plugins.push(vanillaExtractPlugin())
+            config.plugins = [...config.plugins, preact()]
+        }
         if (process.env.NODE_ENV === 'production') {
             if (exists(config.build)) config.build.chunkSizeWarningLimit = 1200
         }
