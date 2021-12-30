@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from 'preact';
-
 import { Page } from './Page';
 import * as HeaderStories from './Header.stories';
 

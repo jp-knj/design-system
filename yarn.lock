@@ -1366,7 +1366,7 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.0.tgz#6734f8ebc106a0860dff7f92bf90df193f0935d7"
   integrity sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==
 
-"@preact/preset-vite@^2.1.5":
+"@preact/preset-vite@2.1.7":
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/@preact/preset-vite/-/preset-vite-2.1.7.tgz#aa019d7c573debf92ced351f101554a770a0dc49"
   integrity sha512-/Ii+aN1Jm8TK5YzDVrj5UOVRZ91F2Nik1P3FbmZyQ5VJAg1ZCkOBBkmLrz9YhiMbbGl+U35yaZNUDMcO8Xlp2g==
