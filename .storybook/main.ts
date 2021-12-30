@@ -1,8 +1,9 @@
 import preact from '@preact/preset-vite'
-import { StorybookConfig, CoreConfig, Options } from '@storybook/core-common'
-import { UserConfig } from 'vite'
+import {CoreConfig, Options, StorybookConfig} from '@storybook/core-common'
+import {UserConfig} from 'vite'
 
-import { Weaken } from '../utils/weaken'
+import {exists} from '../utils/exists'
+import {Weaken} from '../utils/weaken'
 
 interface CustomizedCoreConfig extends Weaken<CoreConfig, 'builder'> {
     builder: CoreConfig['builder'] | 'storybook-builder-vite'
@@ -19,11 +20,9 @@ const config: CustomizedStorybookConfig = {
         builder: 'storybook-builder-vite'
     },
     viteFinal: (config) => {
-        console.log(config.plugins)
-        // @ts-ignore
-        config.plugins = [...config.plugins, preact()]
+        if (exists(config.plugins)) config.plugins = [...config.plugins, preact()]
         if (process.env.NODE_ENV === 'production') {
-            if (config.build) config.build.chunkSizeWarningLimit = 1200
+            if (exists(config.build)) config.build.chunkSizeWarningLimit = 1200
         }
         return config
     }
