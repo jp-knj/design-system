@@ -15,7 +15,7 @@ interface CustomizedStorybookConfig extends Weaken<StorybookConfig, 'core'> {
 }
 
 const config: CustomizedStorybookConfig = {
-    stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+    stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|mdx)'],
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     core: {
         builder: 'storybook-builder-vite'
