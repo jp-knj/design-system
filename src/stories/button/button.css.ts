@@ -7,15 +7,16 @@ export const button = style({
   backgroundImage: "linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)",
   boxShadow: "0 0 20px #eee",
   borderRadius: "100vh",
+  transition: "0.5s",
   textAlign: "center",
   textDecoration: "none",
   padding: '16px',
   ':hover': {
-    backgroundPosition: "right center",
+    backgroundPosition: "right center"
   },
 });
 
 export const buttonText = style({
   color: "#FCFCFC",
-  fontSize: "18px",
+  fontSize: "16px",
 });

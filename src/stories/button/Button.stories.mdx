@@ -4,6 +4,16 @@ import { Button } from "./Button";
 <Meta
   title="Design System/Button"
   component={Button}
+  argTypes={{
+    variant: {
+      options: ['primary'],
+      control: { type: 'select' }
+    },
+    label: {
+      control: { type: 'text' },
+      defaultValue: {summary: 'Edit string'}
+    },
+  }}
 />
 
 # Button
@@ -12,5 +22,5 @@ import { Button } from "./Button";
 export const Template = (args) => <Button {...args} />;
 
 <Story name="primary">
-  <Button href='/' label="typo something"/>
+  {Template.bind({})}
 </Story>
