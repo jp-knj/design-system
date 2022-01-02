@@ -1,0 +1,24 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { Card} from "./Card";
+
+<Meta
+  argTypes={{
+
+  }}
+/>
+
+# Button
+## Displays an image that represents a user or organization
+
+export const Template = (args) => <Button {...args} />;
+
+<Story name="primary">
+  {Template.bind({})}
+</Story>
+
+
+export const Template = () => <Card />;
+
+<Story name="primary">
+  {Template.bind({})}
+</Story>

@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Meta, Story } from "@storybook/addon-docs";
 import { Button } from "./Button";
 
 <Meta
@@ -11,7 +11,7 @@ import { Button } from "./Button";
     },
     label: {
       control: { type: 'text' },
-      defaultValue: {summary: 'Edit string'}
+      defaultValue: 'Edit string'
     },
   }}
 />
@@ -19,7 +19,7 @@ import { Button } from "./Button";
 # Button
 ## Displays an image that represents a user or organization
 
-export const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args} />;
 
 <Story name="primary">
   {Template.bind({})}
